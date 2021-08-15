@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
-import TopNav from "./features/components/TopNav";
-import TrailerPreview from "./features/components/TrailerPreview";
+import Row from "./features/components/Row";
+import request from "./app/requests";
 
 function App() {
     return (
-        <div className="App">
-            <TopNav />
-            <TrailerPreview />
+        <div className="app">
+            <Row title="Now Playing" fetchUrl={request.fetchNowPlaying} />
+            <Row title="Popular" fetchUrl={request.fetchPopular} />
+            <Row title="Top Rated" fetchUrl={request.fetchTopRated} />
+            <Row title="Up Coming" fetchUrl={request.fetchUpcoming} />
         </div>
     );
 }
