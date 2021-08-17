@@ -38,21 +38,28 @@ function Row({ title, fetchUrl }) {
         }
     };
 
+    function trailerDisplay() {
+        return trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />;
+    }
+
     return (
         <div className="row">
             <h2 className="row_title">{title}</h2>
             <div className="row_posters">
                 {movie.map((movie) => (
                     <img
-                        onClick={() => onClickPlayer(movie)}
+                        onClick={() => {
+                            onClickPlayer(movie);
+                        }}
                         key={movie.id}
+                        id={movie.id}
                         className="row_poster"
                         src={baseUrl + movie.backdrop_path}
                         alt={movie.title}
                     />
                 ))}
             </div>
-            {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+            {trailerDisplay()}
         </div>
     );
 }
