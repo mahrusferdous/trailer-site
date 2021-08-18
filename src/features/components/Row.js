@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import movieTrailer from "movie-trailer";
 import axios from "../../app/axios";
 import "./Row.css";
-import YouTube from "react-youtube";
+import Popup from "./Popup";
 
 const baseUrl = "https://image.tmdb.org/t/p/w500";
 
@@ -14,14 +14,6 @@ function Row({ title, fetchUrl }) {
         const request = await axios.get(fetchUrl);
         setMovie(request.data.results);
     }, [fetchUrl]);
-
-    const opts = {
-        height: "390",
-        width: "100%",
-        playerVars: {
-            autoplay: 1,
-        },
-    };
 
     const onClickPlayer = (movie) => {
         if (trailerUrl) {
@@ -35,12 +27,9 @@ function Row({ title, fetchUrl }) {
                 .catch((err) => {
                     console.log(err);
                 });
+            return false;
         }
     };
-
-    function trailerDisplay() {
-        return trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />;
-    }
 
     return (
         <div className="row">
@@ -59,7 +48,7 @@ function Row({ title, fetchUrl }) {
                     />
                 ))}
             </div>
-            {trailerDisplay()}
+            <Popup trailerUrl={trailerUrl} trigger={trailerUrl ? true : false} setTrailerUrl={setTrailerUrl} />
         </div>
     );
 }
