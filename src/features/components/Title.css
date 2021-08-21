@@ -1,0 +1,8 @@
+.hover-player {
+    display: flex;
+    padding: 100px 10px 0px 10px;
+}
+
+.player-wrapper {
+    padding: 5px;
+}

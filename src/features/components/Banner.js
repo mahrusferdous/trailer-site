@@ -8,14 +8,13 @@ function Banner({ fetchUrl }) {
     const [movie, setMovie] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
 
-    useEffect(async () => {
+    const refresh = useCallback(async () => {
         const request = await axios.get(fetchUrl);
         setMovie(request.data.results[Math.floor(Math.random() * request.data.results.length - 1)]);
-    }, []);
+    }, [fetchUrl]);
 
-    let refresh = useCallback(async () => {
-        const request = await axios.get(fetchUrl);
-        setMovie(request.data.results[Math.floor(Math.random() * request.data.results.length - 1)]);
+    useEffect(() => {
+        refresh();
     }, []);
 
     if (movie == undefined) {
