@@ -35,18 +35,21 @@ function Row({ title, fetchUrl }) {
         <div className="row">
             <h2 className="row_title">{title}</h2>
             <div className="row_posters">
-                {movie.map((movie) => (
-                    <img
-                        onClick={() => {
-                            onClickPlayer(movie);
-                        }}
-                        key={movie.id}
-                        id={movie.id}
-                        className="row_poster"
-                        src={baseUrl + movie.backdrop_path}
-                        alt={movie.title}
-                    />
-                ))}
+                {movie.map(
+                    (movie) =>
+                        movie.backdrop_path && (
+                            <img
+                                onClick={() => {
+                                    onClickPlayer(movie);
+                                }}
+                                key={movie.id}
+                                id={movie.id}
+                                className="row_poster"
+                                src={baseUrl + movie.backdrop_path}
+                                alt={movie.title}
+                            />
+                        )
+                )}
             </div>
             <Popup trailerUrl={trailerUrl} trigger={trailerUrl ? true : false} setTrailerUrl={setTrailerUrl} />
         </div>
