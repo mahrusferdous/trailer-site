@@ -1,8 +1,19 @@
 .hover-player {
     display: flex;
     padding: 100px 10px 0px 10px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.hover-player::-webkit-scrollbar {
+    display: none;
 }
 
 .player-wrapper {
     padding: 5px;
+}
+
+.hover-player__button {
+    background-color: #111;
+    border: none;
 }
