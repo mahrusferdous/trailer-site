@@ -16,4 +16,6 @@
 .hover-player__button {
     background-color: #111;
     border: none;
+    border-color: #111;
+    outline: none;
 }

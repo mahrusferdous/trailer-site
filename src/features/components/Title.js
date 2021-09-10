@@ -1,19 +1,18 @@
 import React from "react";
 import HoverVideoPlayer from "react-hover-video-player";
 import "./Title.css";
+import request from "../../app/requests";
 
-function Title() {
-    function handleClick() {
-        console.log("clicked");
+function Title({ changeTitle, changeUrl }) {
+    function handleClick(title, rq) {
+        changeTitle(title);
+        changeUrl(rq);
     }
 
     return (
         <div className="hover-player">
-            <button className="hover-player__button" onClick={handleClick}>
+            <button className="hover-player__button" onClick={() => handleClick("Amazon Original", request.fetchAmazonOriginals)}>
                 <HoverVideoPlayer
-                    onClick={() => {
-                        console.log("clicked");
-                    }}
                     className="player-wrapper"
                     videoSrc="videos/amazon.mov"
                     style={{
@@ -35,7 +34,7 @@ function Title() {
                     loadingOverlay={<div className="loading-spinner-overlay" />}
                 />
             </button>
-            <button className="hover-player__button" onClick={handleClick}>
+            <button className="hover-player__button" onClick={() => handleClick("Apple Original", request.fetchAppleOriginals)}>
                 <HoverVideoPlayer
                     className="player-wrapper"
                     videoSrc="videos/apple.mov"
@@ -58,7 +57,7 @@ function Title() {
                     loadingOverlay={<div className="loading-spinner-overlay" />}
                 />
             </button>
-            <button className="hover-player__button" onClick={handleClick}>
+            <button className="hover-player__button" onClick={() => handleClick("Disney Original", request.fetchDisneyOriginals)}>
                 <HoverVideoPlayer
                     className="player-wrapper"
                     videoSrc="videos/disney.mov"
@@ -81,7 +80,7 @@ function Title() {
                     loadingOverlay={<div className="loading-spinner-overlay" />}
                 />
             </button>
-            <button className="hover-player__button" onClick={handleClick}>
+            <button className="hover-player__button" onClick={() => handleClick("Netflix Original", request.fetchNetflixOriginals)}>
                 <HoverVideoPlayer
                     className="player-wrapper"
                     videoSrc="videos/netflix.mov"
@@ -104,7 +103,7 @@ function Title() {
                     loadingOverlay={<div className="loading-spinner-overlay" />}
                 />
             </button>
-            <button className="hover-player__button" onClick={handleClick}>
+            <button className="hover-player__button" onClick={() => handleClick("HBO Original", request.fetchHboOriginals)}>
                 <HoverVideoPlayer
                     className="player-wrapper"
                     videoSrc="videos/hbo.mov"
@@ -127,7 +126,7 @@ function Title() {
                     loadingOverlay={<div className="loading-spinner-overlay" />}
                 />
             </button>
-            <button className="hover-player__button" onClick={handleClick}>
+            <button className="hover-player__button" onClick={() => handleClick("Youtube Original", request.fetchYoutubeOriginals)}>
                 <HoverVideoPlayer
                     className="player-wrapper"
                     videoSrc="videos/youtube.mov"
@@ -150,7 +149,7 @@ function Title() {
                     loadingOverlay={<div className="loading-spinner-overlay" />}
                 />
             </button>
-            <button className="hover-player__button" onClick={handleClick}>
+            <button className="hover-player__button" onClick={() => handleClick("Hulu Original", request.fetchHuluOriginals)}>
                 <HoverVideoPlayer
                     className="player-wrapper"
                     videoSrc="videos/hulu.mov"
@@ -173,7 +172,7 @@ function Title() {
                     loadingOverlay={<div className="loading-spinner-overlay" />}
                 />
             </button>
-            <button className="hover-player__button" onClick={handleClick}>
+            <button className="hover-player__button" onClick={() => handleClick("Peacock Original", request.fetchPeacockOriginals)}>
                 <HoverVideoPlayer
                     className="player-wrapper"
                     videoSrc="videos/peacock.mov"
@@ -196,7 +195,7 @@ function Title() {
                     loadingOverlay={<div className="loading-spinner-overlay" />}
                 />
             </button>
-            <button className="hover-player__button" onClick={handleClick}>
+            <button className="hover-player__button" onClick={() => handleClick("Paramount Original", request.fetchParamountOriginals)}>
                 <HoverVideoPlayer
                     className="player-wrapper"
                     videoSrc="videos/paramount.mov"
@@ -224,5 +223,3 @@ function Title() {
 }
 
 export default Title;
-
-// imageList.map((image) => videoList.map((video) => hoverPlayer(video, image)))
