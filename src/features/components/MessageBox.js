@@ -6,7 +6,7 @@ function MessageBox() {
         <div>
             <span class="dot">
                 <a href="mailto: mahrusferdous@gmail.com">
-                    <i class="far fa-envelope"></i>\
+                    <i class="far fa-envelope"></i>
                 </a>
             </span>
         </div>
