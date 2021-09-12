@@ -4,6 +4,7 @@ import Row from "./features/components/Row";
 import request from "./app/requests";
 import Banner from "./features/components/Banner";
 import Title from "./features/components/Title";
+import Box from "./features/components/MessageBox";
 
 function App() {
     const [title, setTitle] = useState("Trending All Week");
@@ -19,6 +20,7 @@ function App() {
             <Row title="Popular" fetchUrl={request.fetchPopular} />
             <Row title="Top Rated" fetchUrl={request.fetchTopRated} />
             <Row title="Up Coming" fetchUrl={request.fetchUpcoming} />
+            <Box />
         </div>
     );
 }
