@@ -6,12 +6,12 @@ import Banner from "./features/components/Banner";
 import Title from "./features/components/Title";
 
 function App() {
-    const [title, setTitle] = useState("Amazon Original");
-    const [url, setUrl] = useState(request.fetchAmazonOriginals);
+    const [title, setTitle] = useState("Trending All Week");
+    const [url, setUrl] = useState(request.fetchTrending);
 
     return (
         <div className="app">
-            <Banner fetchUrl={request.fetchNowPlaying} />
+            <Banner fetchUrl={request.fetchTrending} />
             <Title changeTitle={setTitle} changeUrl={setUrl} />
             <Row title={title} fetchUrl={url} />
             <Row title="Top Today" fetchUrl={request.fetchTopToday} />

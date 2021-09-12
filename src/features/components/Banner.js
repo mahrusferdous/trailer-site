@@ -7,10 +7,12 @@ import Popup from "./Popup";
 function Banner({ fetchUrl }) {
     const [movie, setMovie] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
+    const [movieList, setMovieList] = useState([]);
 
     const refresh = useCallback(async () => {
         const request = await axios.get(fetchUrl);
         setMovie(request.data.results[Math.floor(Math.random() * request.data.results.length - 1)]);
+        setMovieList(request.data.results);
     }, [fetchUrl]);
 
     useEffect(() => {
@@ -62,6 +64,17 @@ function Banner({ fetchUrl }) {
                     </button>
                 </biv>
                 <h1 className="banner_description">{movie?.overview}</h1>
+
+                <div className="banner_posters">
+                    {movieList.slice(0, 5).map((movie) => (
+                        <img
+                            src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
+                            alt="poster"
+                            onClick={() => setMovie(movie)}
+                            className="banner_poster"
+                        />
+                    ))}
+                </div>
             </div>
             <div className="banner-fadeBottom" />
             <Popup trailerUrl={trailerUrl} trigger={trailerUrl ? true : false} setTrailerUrl={setTrailerUrl} />
