@@ -38,16 +38,18 @@ function Row({ title, fetchUrl }) {
                 {movie.map(
                     (movie) =>
                         movie.backdrop_path && (
-                            <img
+                            <div
+                                className="row_p"
                                 onClick={() => {
                                     onClickPlayer(movie);
                                 }}
-                                key={movie.id}
-                                id={movie.id}
-                                className="row_poster"
-                                src={baseUrl + movie.backdrop_path}
-                                alt={movie.title}
-                            />
+                            >
+                                <img key={movie.id} id={movie.id} className="row_poster" src={baseUrl + movie.backdrop_path} alt={movie.title} />
+                                <div className="movie_title">
+                                    <h3>Title: {movie?.title || movie?.name || movie?.original_name}</h3>
+                                    <p>{movie?.overview.substr(0, 150)}...</p>
+                                </div>
+                            </div>
                         )
                 )}
             </div>

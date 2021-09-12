@@ -16,7 +16,7 @@ function Title({ changeTitle, changeUrl }) {
                     className="player-wrapper"
                     videoSrc="videos/amazon.mov"
                     style={{
-                        width: "200px",
+                        width: "180px",
                     }}
                     videoStyle={{ borderRadius: "10px", overflow: "hidden" }}
                     pausedOverlay={
@@ -24,8 +24,8 @@ function Title({ changeTitle, changeUrl }) {
                             src="images/amazon.jpg"
                             alt=""
                             style={{
-                                width: "200px",
-                                height: "112.500px",
+                                width: "180px",
+                                height: "101.25px",
                                 borderRadius: "15px",
                                 padding: "5px",
                             }}
@@ -39,7 +39,7 @@ function Title({ changeTitle, changeUrl }) {
                     className="player-wrapper"
                     videoSrc="videos/apple.mov"
                     style={{
-                        width: "200px",
+                        width: "180px",
                     }}
                     videoStyle={{ borderRadius: "10px" }}
                     pausedOverlay={
@@ -47,8 +47,8 @@ function Title({ changeTitle, changeUrl }) {
                             src="images/apple.jpg"
                             alt=""
                             style={{
-                                width: "200px",
-                                height: "112.500px",
+                                width: "180px",
+                                height: "101.25px",
                                 borderRadius: "15px",
                                 padding: "5px",
                             }}
@@ -62,7 +62,7 @@ function Title({ changeTitle, changeUrl }) {
                     className="player-wrapper"
                     videoSrc="videos/disney.mov"
                     style={{
-                        width: "200px",
+                        width: "180px",
                     }}
                     videoStyle={{ borderRadius: "10px" }}
                     pausedOverlay={
@@ -70,8 +70,8 @@ function Title({ changeTitle, changeUrl }) {
                             src="images/disney.jpg"
                             alt=""
                             style={{
-                                width: "200px",
-                                height: "112.500px",
+                                width: "180px",
+                                height: "101.25px",
                                 borderRadius: "15px",
                                 padding: "5px",
                             }}
@@ -85,7 +85,7 @@ function Title({ changeTitle, changeUrl }) {
                     className="player-wrapper"
                     videoSrc="videos/netflix.mov"
                     style={{
-                        width: "200px",
+                        width: "180px",
                     }}
                     videoStyle={{ borderRadius: "10px" }}
                     pausedOverlay={
@@ -93,8 +93,8 @@ function Title({ changeTitle, changeUrl }) {
                             src="images/netflix.jpg"
                             alt=""
                             style={{
-                                width: "200px",
-                                height: "112.500px",
+                                width: "180px",
+                                height: "101.25px",
                                 borderRadius: "15px",
                                 padding: "5px",
                             }}
@@ -108,7 +108,7 @@ function Title({ changeTitle, changeUrl }) {
                     className="player-wrapper"
                     videoSrc="videos/hbo.mov"
                     style={{
-                        width: "200px",
+                        width: "180px",
                     }}
                     videoStyle={{ borderRadius: "10px" }}
                     pausedOverlay={
@@ -116,8 +116,8 @@ function Title({ changeTitle, changeUrl }) {
                             src="images/hbo.jpg"
                             alt=""
                             style={{
-                                width: "200px",
-                                height: "112.500px",
+                                width: "180px",
+                                height: "101.25px",
                                 borderRadius: "15px",
                                 padding: "5px",
                             }}
@@ -131,7 +131,7 @@ function Title({ changeTitle, changeUrl }) {
                     className="player-wrapper"
                     videoSrc="videos/youtube.mov"
                     style={{
-                        width: "200px",
+                        width: "180px",
                     }}
                     videoStyle={{ borderRadius: "10px" }}
                     pausedOverlay={
@@ -139,8 +139,8 @@ function Title({ changeTitle, changeUrl }) {
                             src="images/youtube.jpg"
                             alt=""
                             style={{
-                                width: "200px",
-                                height: "112.500px",
+                                width: "180px",
+                                height: "101.25px",
                                 borderRadius: "15px",
                                 padding: "5px",
                             }}
@@ -154,7 +154,7 @@ function Title({ changeTitle, changeUrl }) {
                     className="player-wrapper"
                     videoSrc="videos/hulu.mov"
                     style={{
-                        width: "200px",
+                        width: "180px",
                     }}
                     videoStyle={{ borderRadius: "10px" }}
                     pausedOverlay={
@@ -162,8 +162,8 @@ function Title({ changeTitle, changeUrl }) {
                             src="images/hulu.jpg"
                             alt=""
                             style={{
-                                width: "200px",
-                                height: "112.500px",
+                                width: "180px",
+                                height: "101.25px",
                                 borderRadius: "15px",
                                 padding: "5px",
                             }}
@@ -177,7 +177,7 @@ function Title({ changeTitle, changeUrl }) {
                     className="player-wrapper"
                     videoSrc="videos/peacock.mov"
                     style={{
-                        width: "200px",
+                        width: "180px",
                     }}
                     videoStyle={{ borderRadius: "10px" }}
                     pausedOverlay={
@@ -185,8 +185,8 @@ function Title({ changeTitle, changeUrl }) {
                             src="images/peacock.jpg"
                             alt=""
                             style={{
-                                width: "200px",
-                                height: "112.500px",
+                                width: "180px",
+                                height: "101.25px",
                                 borderRadius: "15px",
                                 padding: "5px",
                             }}
@@ -200,7 +200,7 @@ function Title({ changeTitle, changeUrl }) {
                     className="player-wrapper"
                     videoSrc="videos/paramount.mov"
                     style={{
-                        width: "200px",
+                        width: "180px",
                     }}
                     videoStyle={{ borderRadius: "10px" }}
                     pausedOverlay={
@@ -208,8 +208,8 @@ function Title({ changeTitle, changeUrl }) {
                             src="images/paramount.jpg"
                             alt=""
                             style={{
-                                width: "200px",
-                                height: "112.500px",
+                                width: "180px",
+                                height: "101.25px",
                                 borderRadius: "15px",
                                 padding: "5px",
                             }}

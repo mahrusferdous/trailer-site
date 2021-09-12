@@ -9,17 +9,42 @@
 
 .row_poster {
     object-fit: contain;
-    width: 100%;
+    width: 355.859px;
     height: 200px;
     margin-right: 20px;
     transition: transform 450ms;
     border-radius: 5px;
 }
 
-.row_poster:hover {
-    transform: scale(1.2);
+.row_p {
+    width: 355.859px;
+    height: 200px;
+    margin-right: 20px;
+    /* position: relative; */
+}
+
+.movie_title {
+    width: 35%;
+    height: 150px;
     position: relative;
-    z-index: 10;
+    display: none;
+    z-index: 7;
+}
+
+.row_p:hover .movie_title {
+    display: inline-block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: 20px;
+    left: 0;
+    right: 0;
+    text-align: left;
+}
+
+.row_p:hover .row_poster {
+    transform: scale(1.15);
+    position: relative;
+    z-index: 5;
 }
 
 .row_posters {
